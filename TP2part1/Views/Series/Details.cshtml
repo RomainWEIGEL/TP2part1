@@ -1,0 +1,54 @@
+﻿@model TP2part1.Models.EntityFramework.Serie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Serie</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Titre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Titre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Resume)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Resume)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nbsaisons)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nbsaisons)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nbepisodes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nbepisodes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Anneecreation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Anneecreation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Network)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Network)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Serieid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

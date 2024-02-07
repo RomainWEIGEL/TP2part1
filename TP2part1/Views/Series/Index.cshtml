@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TP2part1.Models.EntityFramework.Serie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nbsaisons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nbepisodes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Anneecreation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Network)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nbsaisons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nbepisodes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anneecreation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Network)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Serieid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Serieid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Serieid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
